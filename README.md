@@ -1,4 +1,4 @@
-# How to avoid DLL injection?
+# How to protect against DLL injection?
 
 * Proof-of-Concept on how to block DLLs from being forcibly loaded onto a process
 * Effective against many HIPS/Debugging tools

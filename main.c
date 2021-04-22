@@ -2,11 +2,10 @@
 ** AUTHOR: Ulyouth (https://github.com/ulyouth)
 ** DATE: 22.04.2021
 ** DESC: The following code is an example on how to block certain DLLs from being
-** forcibly loaded onto a process. It works for all DLLs loaded from usermode and by 
-** many loaded by the kernel as well. The trick consists in creating a suspended 
-** process, hooking the LdrLoadDll function while still suspended, and then resume 
-** the process. It is an effective anti-debugging method, which also works against 
-** many HIPS.
+** forcibly loaded onto a process. It works for most DLLs loaded from both user and
+** kernelmode. The trick consists in creating a suspended process, hooking the 
+** LdrLoadDll function while still suspended, and then resume the process. It is an 
+** effective anti-debugging method, which also works against many HIPS.
 ***************************************************************************************/
 
 #include <stdio.h>

@@ -115,7 +115,7 @@ LPVOID GetProcessBaseAddress(HANDLE hProcess)
 	LPVOID lpImgBase = 0;
 	DWORD dwRead;
 
-	// Read the image base about the process's PEB
+	// Read the image base out of the process's PEB
 	if (!ReadProcessMemory(hProcess, &Pbi.PebBaseAddress->Reserved3[1], &lpImgBase, 
 		sizeof(LPVOID), &dwRead))
 		return 0;
